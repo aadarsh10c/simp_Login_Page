@@ -44,5 +44,10 @@ module.exports = (env) => {
                 template: './src/index.html',
             }),
         ],
+        resolve: {
+            alias: {
+                '@mui/styled-engine': '@mui/styled-engine-sc',
+            },
+        },
     };
 };
