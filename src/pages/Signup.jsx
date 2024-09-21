@@ -67,35 +67,61 @@ function Signup() {
             </StackStyled>
             <FormStyled container component="form" spacing={2}>
                 <Grid size={{ xs: 12, sm: 6 }}>
-                    <FormControl size='small' fullWidth required variant="outlined">
+                    <FormControl
+                        size="small"
+                        fullWidth
+                        required
+                        variant="outlined"
+                    >
                         <InputLabel htmlFor="firstName-outlined">
                             First Name
                         </InputLabel>
                         <OutlinedInput
                             id="firstName-outlined"
                             label="First Name"
+                            autoComplete="given-name"
                         />
                     </FormControl>
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6 }}>
-                    <FormControl size='small' fullWidth required variant="outlined">
+                    <FormControl
+                        size="small"
+                        fullWidth
+                        required
+                        variant="outlined"
+                    >
                         <InputLabel htmlFor="lastName-outlined">
                             Last Name
                         </InputLabel>
                         <OutlinedInput
                             id="lastName-outlined"
                             label="Last Name"
+                            autoComplete="family-name"
                         />
                     </FormControl>
                 </Grid>
                 <Grid size={12}>
-                    <FormControl size='small' fullWidth required variant="outlined">
+                    <FormControl
+                        size="small"
+                        fullWidth
+                        required
+                        variant="outlined"
+                    >
                         <InputLabel htmlFor="email-outlined">Email</InputLabel>
-                        <OutlinedInput id="firstName-outlined" label="Email" />
+                        <OutlinedInput
+                            id="firstName-outlined"
+                            label="Email"
+                            autoComplete="username"
+                        />
                     </FormControl>
                 </Grid>
                 <Grid size={12}>
-                    <FormControl size='small' fullWidth required variant="outlined">
+                    <FormControl
+                        size="small"
+                        fullWidth
+                        required
+                        variant="outlined"
+                    >
                         <InputLabel htmlFor="password-outlined">
                             Password
                         </InputLabel>
@@ -103,6 +129,7 @@ function Signup() {
                             type="password"
                             id="password-outlined"
                             label="Password"
+                            autoComplete="new-password"
                         />
                     </FormControl>
                 </Grid>
