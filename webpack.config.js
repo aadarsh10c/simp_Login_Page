@@ -15,6 +15,7 @@ module.exports = (env) => {
         devServer: {
             static: './dist',
             hot: true,
+            historyApiFallback: true,
         },
         module: {
             rules: [

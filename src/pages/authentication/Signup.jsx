@@ -1,58 +1,27 @@
 import React from 'react';
 import {
-    Avatar,
     Box,
-    Typography,
     useMediaQuery,
-    Stack,
     FormControl,
     InputLabel,
     OutlinedInput,
     Grid2 as Grid,
-    Button,
 } from '@mui/material';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import BeenhereIcon from '@mui/icons-material/Beenhere';
-import styled, { css } from 'styled-components';
 import { useTheme } from '@mui/material/styles';
-// import { Grid2  } from '@mui/material/Grid2';
-
-const AvatarStyled = styled(Avatar)`
-    background-color: ${(props) => props.theme.palette.secondary.main};
-    margin: 0 auto;
-    ${(props) =>
-        props.match
-            ? css`
-                  padding: 14px;
-              `
-            : ``}
-`;
-
-const SubHeading = styled(Typography)`
-    color: ${(props) => props.theme.palette.secondary.main};
-    text-align: center;
-`;
-
-const StackStyled = styled(Stack)`
-    padding: 1.25rem;
-`;
-
-const FormStyled = styled(Grid)`
-    max-width: 400px;
-    margin: 0 auto;
-    & .Mui-focused.MuiInputBase-formControl {
-        border-color: coral;
-    }
-`;
-
-const ButtonStyled = styled(Button)`
-    margin: 0 auto;
-`;
+import {
+    AvatarStyled,
+    SubHeading,
+    StackStyled,
+    FormStyled,
+    ButtonStyled,
+} from './common.jsx';
 
 function Signup() {
     const theme = useTheme();
     const match = useMediaQuery(theme.breakpoints.down('sm'));
-
+    console.log('theme', theme.palette);
     return (
         <Box>
             <StackStyled component="header">
@@ -63,7 +32,7 @@ function Signup() {
                 >
                     <LockOpenIcon fontSize={match ? 'small' : ''} />
                 </AvatarStyled>
-                <SubHeading variant={match ? 'h6' : 'h5'}>Sign up !</SubHeading>
+                <SubHeading theme={theme} variant={match ? 'h6' : 'h5'}>Sign up !</SubHeading>
             </StackStyled>
             <FormStyled container component="form" spacing={2}>
                 <Grid size={{ xs: 12, sm: 6 }}>
